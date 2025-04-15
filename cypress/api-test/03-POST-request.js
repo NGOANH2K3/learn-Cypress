@@ -14,7 +14,7 @@ describe('Test POST request',()=>{
         let requestObject = {
             method: 'POST',
             url: url,
-            Headers: header,
+            headers: header,
             body: requestBody
         }
 
@@ -27,10 +27,10 @@ describe('Test POST request',()=>{
                 let responseBody = body.body
 
                 //Verification
-                expect(userId).to.eq(requestBody.userId,'userId is not correct')
-                expect(id).to.eq(101,'id is not correct')
-                expect(title).to.eq(requestBody.title,'title is not correct')
-                expect(responseBody).to.eq(requestBody.body,'body is not correct')
+                expect(userId).to.eq(requestBody.userId,'verifing userId')
+                expect(id).to.eq(101,'verifing Id')
+                expect(title).to.eq(requestBody.title,'verifing Title')
+                expect(responseBody).to.eq(requestBody.body,'verifing Body')
             })
         })
     })

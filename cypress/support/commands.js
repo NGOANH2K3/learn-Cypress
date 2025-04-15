@@ -1,3 +1,4 @@
+import { DEFAULT } from "../utils/methods"
 // ***********************************************
 // This example commands.js shows you how to
 // create various custom commands and overwrite
@@ -23,3 +24,38 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+
+let header = {
+    'Content-type': 'application/json; charset=UTF-8',
+}
+
+/***
+ * @memberof cy 
+ * @method createPost
+ * @param {object} postBody
+ * */
+
+Cypress.Commands.add('createPost', postBody => {
+    cy.request({
+        method: DEFAULT.post,
+        url: Cypress.env('baseUrl'),
+        headers: header ,
+        body: postBody
+    })
+})
+
+/***
+ * @memberof cy 
+ * @method updatePost
+ * @param {object} updateBoby
+ * */
+
+Cypress.Commands.add('updatePost', updateBoby => {
+    cy.request({
+        method: DEFAULT.put,
+        url: Cypress.env('baseUrl') + '/' + updateBoby,
+        headers: header,
+        body: updateBoby
+    })
+})

@@ -4,13 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cypress open"
+    "open": "cypress open",
+    "test": "cypress run",
+    "test:mocha-reporter": "npx cypress run --reporter mochawesome --reporter-options reportDir=\"results\",overwrite=false,html=false,json=true",
+    "marge-report": "mochawesome-merge \"results/*.json\" > mochawesome.json",
+    "build-report": "marge mochawesome.json"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "cypress": "^14.3.0"
+    "cypress": "^14.3.0",
+    "marge": "^1.0.1",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.4.1",
+    "mochawesome-report-generator": "^6.2.0",
+    "serve": "^14.2.4"
   }
 }

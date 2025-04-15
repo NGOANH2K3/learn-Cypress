@@ -6,7 +6,7 @@ describe('Test GET Request', ()=>{
         }).then(response=>{
             // cy.log(JSON.stringify(response.body))
             expect(response.status).to.eq(200);
-            expect(response.body.length).eq(100);
+            expect(response.body.length).to.eq(100);
         })
     })
 })
