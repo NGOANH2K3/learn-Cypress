@@ -7,8 +7,9 @@
     "open": "cypress open",
     "test": "cypress run",
     "test:mocha-reporter": "npx cypress run --reporter mochawesome --reporter-options reportDir=\"results\",overwrite=false,html=false,json=true",
-    "marge-report": "mochawesome-merge \"results/*.json\" > mochawesome.json",
-    "build-report": "marge mochawesome.json"
+    "marge-report": "mochawesome-merge \"results/*.json\" > index.json",
+    "build-report": "marge index.json",
+    "open-report": "npm run marge-report && npm run build-report && serve mochawesome-report"
   },
   "keywords": [],
   "author": "",
