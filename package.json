@@ -9,7 +9,8 @@
     "test:mocha-reporter": "npx cypress run --reporter mochawesome --reporter-options reportDir=\"results\",overwrite=false,html=false,json=true",
     "marge-report": "mochawesome-merge \"results/*.json\" > index.json",
     "build-report": "marge index.json",
-    "open-report": "npm run marge-report && npm run build-report && serve mochawesome-report"
+    "open-report": "npm run marge-report && npm run build-report && serve mochawesome-report",
+    "f": "cypress-cloud run --reporter mochawesome --reporter-options reportDir=\"results\",overwrite=false,html=false,json=true --parallel --record --key somekey --ci-build-id build-3"
   },
   "keywords": [],
   "author": "",
@@ -22,5 +23,9 @@
     "mochawesome-merge": "^4.4.1",
     "mochawesome-report-generator": "^6.2.0",
     "serve": "^14.2.4"
+  },
+  "dependencies": {
+    "cy2": "^4.0.9",
+    "cypress-cloud": "^1.13.0"
   }
 }
