@@ -10,7 +10,7 @@
     "marge-report": "mochawesome-merge \"results/*.json\" > index.json",
     "build-report": "marge index.json",
     "open-report": "npm run marge-report && npm run build-report && serve mochawesome-report",
-    "f": "cypress-cloud run --reporter mochawesome --reporter-options reportDir=\"results\",overwrite=false,html=false,json=true --parallel --record --key somekey --ci-build-id build-3"
+    "test:cy2": "cypress-cloud run --reporter mochawesome --reporter-options reportDir=\"results\",overwrite=false,html=false,json=true --parallel --record --key somekey"
   },
   "keywords": [],
   "author": "",
