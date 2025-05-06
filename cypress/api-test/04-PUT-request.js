@@ -14,7 +14,7 @@ describe('Test PUT method request', () => {
               },
             body: body
         }).then(res=>{
-            let { status} = res
+            let {status} = res
             let resBody = res.body
             let {userId, id, title, body} = resBody
            

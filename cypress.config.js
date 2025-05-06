@@ -6,7 +6,7 @@ module.exports = defineConfig({
       // implement node event listeners here
       return cloudPlugin(on, config);
     },
-    specPattern: 'cypress/api-test/**/*.{js,jsx,ts,tsx}',
+    specPattern: 'cypress/e2e/**/*.{js,jsx,ts,tsx}',
     supportFile: 'cypress/support/e2e.{js,jsx,ts,tsx}',
     projectId: 'Cypress-api',
   },

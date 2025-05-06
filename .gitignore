@@ -4,4 +4,5 @@
 /results/
 /cypress/screenshots/
 /cypress/videos/
+/data/
 package-lock.json
